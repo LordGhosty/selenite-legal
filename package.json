@@ -8,12 +8,12 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/clean-build.mjs && node scripts/fetch-selenite-avatar.mjs",
-    "build": "next build",
+    "build": "next build --webpack",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern .next --ignore-pattern out --ignore-pattern dist"
   },
   "dependencies": {
-    "next": "16.3.2",
+    "next": "16.3.5",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },

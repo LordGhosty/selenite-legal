@@ -71,7 +71,7 @@ async function refreshAvatar() {
 try {
   await refreshAvatar();
 } catch (error) {
-  if (process.env.CI === "true" || !(await fallbackExists())) {
+  if (!(await fallbackExists())) {
     throw error;
   }
 

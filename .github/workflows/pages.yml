@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "17 * * * *"
+    # Refresh the Discord avatar once per day without rebuilding hourly.
+    - cron: "17 3 * * *"
   workflow_dispatch:
 
 permissions:
